@@ -16,7 +16,7 @@ module.exports = function (grunt) {
             // production config is also available
             dist: {
                 files: {
-                    'css/ui.css': 'scss/ui.scss',
+                    'css/app-ui.css': 'scss/app-ui.scss',
                 }
             }
         }

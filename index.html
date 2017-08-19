@@ -3,14 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="keywords" content="lorem, ipsum">
+        <meta name="description" content="ui lorem ipsum for the test page done with bootstrap and fontawesome">
+        <meta name="author" content="Radu Mogos">
 
         <title>Test UI</title>
 
         <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/ui.css" rel="stylesheet">
+        <link href="css/app-ui.css" rel="stylesheet">
     </head>
     <body>
 
@@ -21,8 +22,15 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search for a location" aria-label="Search">
+                    <form class="d-inline w-100 my-2 search-form" action="" method="post">
+                        <div class="form-row">
+                            <div class="col-12 col-md-5">
+                                <div class="input-group input-group-sm my-2 my-md-0">
+                                    <div class="input-group-addon"><span class="fa fa-fw fa-search"></span></div>
+                                    <input class="form-control" type="text" placeholder="Search for a location" aria-label="Search">
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -41,10 +49,10 @@
                         </ol>
                     </div>
                     <div class="col text-right">
-                        <strong>1</strong> of <strong>5</strong>
+                        <span class="estate-paginator"><strong id="page_current">1</strong> of <strong id="page_total">5</strong></span>
                         <div class="btn-group" role="group" aria-label="Estate browser">
-                            <button type="button" class="btn btn-secondary btn-sm"><span class="fa fa-angle-left"></span></button>
-                            <button type="button" class="btn btn-secondary btn-sm"><span class="fa fa-angle-right"></span></button>
+                            <button type="button" class="btn btn-secondary btn-sm" aria-label="Previous estate"><span class="fa fa-angle-left"></span></button>
+                            <button type="button" class="btn btn-secondary btn-sm" aria-label="Next estate"><span class="fa fa-angle-right"></span></button>
                         </div>
                     </div>
                 </div>
@@ -56,7 +64,7 @@
             <div class="container">
                 <div class="row">
                     <!-- carousel -->
-                    <div class="col-sm-8">
+                    <div class="col-md-8">
                         <div id="carousel_test" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -76,12 +84,25 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-md-4">
                         <div class="estate-contact">
-                            <p><strong>Agency</strong> Newoffice</p>
-                            <p><strong>Agent</strong> Sofia Lothsson</p>
-                            <p><a href="">View all our listings</a></p>
-                            <p>
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <img src="img/random_person.jpg" class="img-fluid rounded-circle border border-secondary" alt="">
+                                </div>
+                                <div class="col-8">
+                                    <img src="img/random_estate.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <dl class="row unstyled">
+                                <dt class="col-4">Agency</dt>
+                                <dd class="col-8">Newoffice</dd>
+
+                                <dt class="col-4">Agent</dt>
+                                <dd class="col-8">Sofia Lothsson</dd>
+                            </dl>
+                            <p class="my-3 my-md-1 my-xl-3"><a href="">View all our listings</a></p>
+                            <p class="my-2 my-lg-1 my-xl-3">
                                 <a href="" class="btn btn-primary btn-block right-icons">Send email <span class="fa fa-fw fa-envelope"></span></a>
                             </p>
                             <p>
@@ -91,7 +112,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-8">
+                    <div class="col-md-8">
                         <h1>1 BHK Furnishe Burj/View Index Tower</h1>
                         <p>Apartment for rent in Index Tower, DIFC</p>
                         <hr/>
@@ -114,8 +135,8 @@
                             </p>
                         </div>
                         <hr/>
-                        <h3>Specifications</h3>
-                        <div class="row">
+                        <h2>Specifications</h2>
+                        <div class="row specifications">
                             <div class="col-md-6">
                                 <dl class="row">
                                     <dt class="col-sm-4">Type</dt>
@@ -142,15 +163,30 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-md-4 my-2 my-md-0 px-xl-5">
                         <p>
                             <a href="" class="btn btn-info btn-block right-icons">Save as favorite <span class="fa fa-fw fa-star-o"></span></a>
                         </p>
-                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary"><span class="fa fa-fw fa-envelope"></span> e-post</button>
-                            <button type="button" class="btn btn-secondary"><span class="fa fa-fw fa-facebook-f"></span> Messenger</button>
-                            <button type="button" class="btn btn-secondary"><span class="fa fa-fw fa-link"></span> Link</button>
-                        </div>
+                        <p class="stroke-title">
+                            <strong>Share with a friend</strong>
+                        </p>
+                        <ul class="nav nav-pills nav-fill social-links">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span class="fa fa-fw fa-envelope"></span> e-post
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span class="fa fa-fw fa-facebook-f"></span> Messenger
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span class="fa fa-fw fa-link"></span> Link
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -159,29 +195,29 @@
         <section class="section-photos spacing-normal">
             <div class="container">
                 <!-- photos -->
-                <h3>More photos</h3>
+                <h2>More photos</h2>
                 <div class="row">
                     <div class="col">
-                        <img src="img/gallery.jpg" alt="" class="img-fluid" />
+                        <img src="img/gallery.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="col">
-                        <img src="img/gallery.jpg" alt="" class="img-fluid" />
+                        <img src="img/gallery.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <img src="img/gallery.jpg" alt="" class="img-fluid" />
+                        <img src="img/gallery.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="col">
-                        <img src="img/gallery.jpg" alt="" class="img-fluid" />
+                        <img src="img/gallery.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="col">
-                        <img src="img/gallery.jpg" alt="" class="img-fluid" />
+                        <img src="img/gallery.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="col">
                         <a href="">
                             <figure>
-                                <img src="img/gallery.jpg" alt="" class="img-fluid" />
+                                <img src="img/gallery.jpg" alt="" class="img-fluid">
                                 <figcaption>See all 20 photos</figcaption>
                             </figure>
                         </a>
@@ -194,8 +230,8 @@
         <section class="section-map spacing-normal">
             <div class="container">
                 <!-- Google maps -->
-                <h3>Neighborhood</h3>
-                <div class="row">
+                <h2>Neighborhood</h2>
+                <div class="row py-0">
                     <div class="col">
                         <div id="google_map"></div>
                         <script>
@@ -203,20 +239,21 @@
                                 var dubai = {lat: 25.207567, lng: 55.278783};
                                 var map = new google.maps.Map(document.getElementById('google_map'), {
                                     zoom: 14,
-                                    center: dubai
+                                    center: dubai,
+                                    disableDefaultUI: true
                                 });
                             }
                         </script>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <a class="btn btn-secondary btn-sm"><span class="fa fa-angle-double-left"></span></a>
+                    <div class="col-6">
+                        <button class="btn btn-secondary btn-sm" aria-label="Back"><span class="fa fa-angle-double-left"></span></button>
                     </div>
-                    <div class="col-md-6 text-right">
+                    <div class="col-6 text-right">
                         <div class="btn-group" role="group" aria-label="Map browser">
-                            <button type="button" class="btn btn-secondary btn-sm"><span class="fa fa-angle-left"></span></button>
-                            <button type="button" class="btn btn-secondary btn-sm"><span class="fa fa-angle-right"></span></button>
+                            <button type="button" class="btn btn-secondary btn-sm" aria-label="Browse left"><span class="fa fa-angle-left"></span></button>
+                            <button type="button" class="btn btn-secondary btn-sm" aria-label="Browse right"><span class="fa fa-angle-right"></span></button>
                         </div>
                     </div>
                 </div>
@@ -228,10 +265,11 @@
         <section class="section-offers spacing-normal">
             <div class="container">
                 <!-- 4 estate offers per row -->
+                <h3 class="text-center">Similar listing in the nearby area</h3>
                 <div class="row">
                     <div class="col-md-3">
                         <div class="estate-offer">
-                            <img src="img/thumbnail1.jpg" alt="" class="img-fluid"/>
+                            <img src="img/thumbnail1.jpg" alt="" class="img-fluid">
                             <div class="properties">
                                 <p><a href="">Beautiful 1 bedroom</a></p>
                                 <div class="row">
@@ -253,7 +291,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="estate-offer">
-                            <img src="img/thumbnail1.jpg" alt="" class="img-fluid"/>
+                            <img src="img/thumbnail1.jpg" alt="" class="img-fluid">
                             <div class="properties">
                                 <p><a href="">Beautiful studio</a></p>
                                 <div class="row">
@@ -275,7 +313,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="estate-offer">
-                            <img src="img/thumbnail1.jpg" alt="" class="img-fluid"/>
+                            <img src="img/thumbnail1.jpg" alt="" class="img-fluid">
                             <div class="properties">
                                 <p><a href="">Beautiful 1 bedroom</a></p>
                                 <div class="row">
@@ -297,7 +335,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="estate-offer">
-                            <img src="img/thumbnail1.jpg" alt="" class="img-fluid"/>
+                            <img src="img/thumbnail1.jpg" alt="" class="img-fluid">
                             <div class="properties">
                                 <p><a href="">Beautiful 2 bedrooms</a></p>
                                 <div class="row">
@@ -319,8 +357,8 @@
                     </div>
                 </div>
                 <hr>
-                <h3>Explore other opportunities in and around DIFC</h3>
-                <p>
+                <h2>Explore other opportunities in and around DIFC</h2>
+                <p class="text-secondary">
                     More properties for rent in DIFC: Apartments - Duplex - Townhouses<br/>
                     Nearby areas: Downtown - Business Bay - Sheikh Zayed Road
                 </p>
@@ -331,7 +369,6 @@
             <div class="container">
                 <!-- footer with links -->
                 <footer>
-                    <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-3">
                                 <h4>Popular Searches</h4>
@@ -384,6 +421,21 @@
                         </div>
                     </div>
                 </footer>
+
+            <div class="container larger copyright-footer">
+                <div class="row">
+                    <div class="col">
+                        <small>
+                            <a href="">Terms of service</a>
+                            <a href="">Privacy policy</a>
+                        </small>
+                    </div>
+                    <div class="col text-right">
+                        <small>
+                            <a href="">Copyright &copy; 2017 Alpha Bravo Consulting - All rights reserved</a>
+                        </small>
+                    </div>
+                </div>
             </div>
         </section>
 

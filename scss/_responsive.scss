@@ -1,0 +1,8 @@
+/** responsive enhancements **/
+@media (min-width: 1400px) {
+  .container {
+    &.larger {
+      min-width: 1360px;
+    }
+  }
+}

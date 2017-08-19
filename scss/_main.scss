@@ -1,15 +1,7 @@
-// overwriting some bootstrap values
-$bg-dark: #305e9c;
-$btn-secondary-bg-color: #ffffff;
-$main-color: #333333;
-$anchor-color: #4b95b7;
-$border-color: #d4d5da;
-
-$elements-spacing: 15px;
-
+/** general tags override **/
 body {
   color: $main-color;
-  font-size: 14px;
+  font-size: $main-font-size;
 }
 
 a {
@@ -20,19 +12,26 @@ h1 {
   font-size: 1.5em;
 }
 
-h3 {
+h2 {
   font-size: 1.3em;
   margin: $elements-spacing 0;
 }
 
+h3 {
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
 hr {
   margin: 0;
+  border-top: 1px solid $border-color;
 }
 
 dl {
   margin-bottom: 0;
 }
 
+/** bootstrap specific classes override **/
 .bg-blue {
   background-color: $bg-dark;
 }
@@ -40,7 +39,7 @@ dl {
 .btn-primary {
   background-color: $bg-dark;
   border-color: #0a3a48;
-  border-bottom-width: 3px;
+  border-width: 0 0 2px 0;
 }
 
 .btn-secondary {
@@ -65,6 +64,17 @@ dl {
   padding: 0.1em 0.5em;
 }
 
+/** our custom UI classes **/
+.search-form {
+  .input-group-addon {
+    background: white;
+    border: none;
+  }
+  .form-control {
+    border: none;
+  }
+}
+
 .right-icons {
   position: relative;
   &:before {
@@ -75,7 +85,8 @@ dl {
     height: 100%;
     top: 0;
     right: 0;
-    background: #02412e;
+    background: $btn-addon-bg-color;
+    border-radius: 0 .25rem .25rem 0;
   }
   .fa {
     position: absolute;
@@ -103,6 +114,53 @@ dl {
   }
   &:before {
     content: '>';
+  }
+}
+
+.estate-paginator {
+  margin-right: 1em;
+}
+
+.social-links {
+  font-size: 0.8em;
+  .nav-item {
+    &:first-child {
+      .nav-link {
+        border-right: 0;
+        border-radius: 0.25rem 0 0 0.25rem;
+      }
+    }
+    &:last-child {
+      .nav-link {
+        border-left: 0;
+        border-radius: 0 0.25rem 0.25rem 0;
+      }
+    }
+  }
+  .nav-link {
+    border: 1px solid $border-color;
+    border-radius: 0;
+    padding: 5px;
+    color: gray;
+  }
+}
+
+.stroke-title {
+  text-align: center;
+  font-size: 0.8em;
+  color: $border-color;
+  text-transform: uppercase;
+  padding-top: 2px;
+  strong {
+    display: inline-block;
+    background: white;
+    padding: 2px 20px;
+  }
+  &:after {
+    content: '';
+    border-bottom: 1px solid $border-color;
+    display: block;
+    margin-top: -10px;
   }
 }
 
@@ -134,35 +192,48 @@ dl {
       padding-top: 25%;
     }
   }
+  hr {
+    margin-top: $elements-spacing * 2;
+  }
 }
 
 .section-offer-details {
   .description {
     margin: $elements-spacing 0;
   }
-  dl {
-    margin: 0;
+  .specifications {
+    dl {
+      margin: 0;
+    }
+    dt, dd {
+      padding: 10px 0;
+      border-bottom: 1px solid $border-color;
+      margin-bottom: 0;
+    }
+    dt {
+      font-weight: normal;
+    }
+    dd {
+      font-weight: bold;
+    }
   }
-  dt, dd {
-    padding: 10px 0;
-    border-bottom: 1px solid $border-color;
-    margin-bottom: 0;
-  }
-  dt {
-    font-weight: normal;
-  }
-  dd {
-    font-weight: bold;
+  dl.unstyled {
+    margin: 1em 0;
+    dd, dt {
+      font-weight: normal;
+      margin-left: 0;
+      padding-left: 0;
+    }
   }
 }
 
 .estate-offer {
   border: 1px solid $border-color;
-  margin: 5px 0;
+  margin: $estate-card-spacing 0;
   .properties {
-    padding: 5px 10px;
+    padding: $estate-card-spacing ($estate-card-spacing * 2);
     p {
-      margin: 5px 5px;
+      margin: $estate-card-spacing $estate-card-spacing;
       strong {
         display: block;
         color: lightgray;
@@ -200,4 +271,11 @@ dl {
 #google_map {
   height: 500px;
   width: 100%;
+}
+
+.copyright-footer {
+  border-top: 1px solid #8f8f8f;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 1em;
 }
