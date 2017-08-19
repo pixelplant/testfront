@@ -1,0 +1,145 @@
+body {
+  color: #333333;
+  font-size: 14px; }
+
+a {
+  color: #4b95b7; }
+
+h1 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.3em;
+  margin: 15px 0; }
+
+hr {
+  margin: 0; }
+
+dl {
+  margin-bottom: 0; }
+
+.bg-blue {
+  background-color: #305e9c; }
+
+.btn-primary {
+  background-color: #305e9c;
+  border-color: #0a3a48;
+  border-bottom-width: 3px; }
+
+.btn-secondary {
+  background-color: #ffffff;
+  border-color: #d4d5da;
+  color: #4b95b7; }
+
+.btn-info {
+  background: white;
+  border: 1px solid #d4d5da;
+  color: inherit; }
+  .btn-info.right-icons:before {
+    background: none;
+    border-left: 1px solid #d4d5da; }
+
+.btn-sm, .btn-group-sm > .btn {
+  padding: 0.1em 0.5em; }
+
+.right-icons {
+  position: relative; }
+  .right-icons:before {
+    content: '';
+    display: block;
+    width: 40px;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #02412e; }
+  .right-icons .fa {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+
+.breadcrumb {
+  background: none;
+  padding: 0;
+  margin: 0; }
+  .breadcrumb .breadcrumb-item.starter:before {
+    content: ''; }
+
+.breadcrumb-item + .breadcrumb-item a {
+  padding-right: 15px; }
+.breadcrumb-item + .breadcrumb-item:before {
+  content: '>'; }
+
+.spacing-normal {
+  margin-bottom: 15px; }
+  .spacing-normal .container > .row {
+    padding: 15px 0; }
+
+.section-photos figure {
+  position: relative;
+  margin: 0;
+  padding: 0; }
+  .section-photos figure img {
+    position: relative; }
+  .section-photos figure figcaption {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background: rgba(100, 100, 100, 0.6);
+    padding-top: 25%; }
+
+.section-offer-details .description {
+  margin: 15px 0; }
+.section-offer-details dl {
+  margin: 0; }
+.section-offer-details dt, .section-offer-details dd {
+  padding: 10px 0;
+  border-bottom: 1px solid #d4d5da;
+  margin-bottom: 0; }
+.section-offer-details dt {
+  font-weight: normal; }
+.section-offer-details dd {
+  font-weight: bold; }
+
+.estate-offer {
+  border: 1px solid #d4d5da;
+  margin: 5px 0; }
+  .estate-offer .properties {
+    padding: 5px 10px; }
+    .estate-offer .properties p {
+      margin: 5px 5px; }
+      .estate-offer .properties p strong {
+        display: block;
+        color: lightgray;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        font-weight: normal; }
+
+.estate-contact {
+  border: 1px solid lightgray;
+  padding: 15px;
+  height: 100%; }
+
+.dark-footer {
+  padding: 10px 0;
+  background: #464e51;
+  color: white; }
+  .dark-footer h4 {
+    font-size: 1em;
+    margin: 10px 0;
+    padding: 0; }
+  .dark-footer ul {
+    font-size: 0.85em; }
+  .dark-footer a {
+    color: #8f8f8f; }
+
+#google_map {
+  height: 500px;
+  width: 100%; }
+
+/*# sourceMappingURL=ui.css.map */

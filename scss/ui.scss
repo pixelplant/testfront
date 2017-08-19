@@ -1,0 +1,203 @@
+// overwriting some bootstrap values
+$bg-dark: #305e9c;
+$btn-secondary-bg-color: #ffffff;
+$main-color: #333333;
+$anchor-color: #4b95b7;
+$border-color: #d4d5da;
+
+$elements-spacing: 15px;
+
+body {
+  color: $main-color;
+  font-size: 14px;
+}
+
+a {
+  color: $anchor-color;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+  margin: $elements-spacing 0;
+}
+
+hr {
+  margin: 0;
+}
+
+dl {
+  margin-bottom: 0;
+}
+
+.bg-blue {
+  background-color: $bg-dark;
+}
+
+.btn-primary {
+  background-color: $bg-dark;
+  border-color: #0a3a48;
+  border-bottom-width: 3px;
+}
+
+.btn-secondary {
+  background-color: $btn-secondary-bg-color;
+  border-color: $border-color;
+  color: $anchor-color;
+}
+
+.btn-info {
+  background: white;
+  border: 1px solid $border-color;
+  color: inherit;
+  &.right-icons {
+    &:before {
+      background: none;
+      border-left: 1px solid $border-color;
+    }
+  }
+}
+
+.btn-sm, .btn-group-sm > .btn {
+  padding: 0.1em 0.5em;
+}
+
+.right-icons {
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    width: 40px;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #02412e;
+  }
+  .fa {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.breadcrumb {
+  background: none;
+  padding: 0;
+  margin: 0;
+  .breadcrumb-item {
+    &.starter {
+      &:before {
+        content: '';
+      }
+    }
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  a {
+    padding-right: 15px;
+  }
+  &:before {
+    content: '>';
+  }
+}
+
+.spacing-normal {
+  margin-bottom: $elements-spacing;
+  .container > .row {
+    padding: $elements-spacing 0;
+  }
+}
+
+.section-photos {
+  figure {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    img {
+      position: relative;
+    }
+    figcaption {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      background: rgba(100, 100, 100, 0.6);
+      padding-top: 25%;
+    }
+  }
+}
+
+.section-offer-details {
+  .description {
+    margin: $elements-spacing 0;
+  }
+  dl {
+    margin: 0;
+  }
+  dt, dd {
+    padding: 10px 0;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 0;
+  }
+  dt {
+    font-weight: normal;
+  }
+  dd {
+    font-weight: bold;
+  }
+}
+
+.estate-offer {
+  border: 1px solid $border-color;
+  margin: 5px 0;
+  .properties {
+    padding: 5px 10px;
+    p {
+      margin: 5px 5px;
+      strong {
+        display: block;
+        color: lightgray;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.estate-contact {
+  border: 1px solid lightgray;
+  padding: $elements-spacing;
+  height: 100%;
+}
+
+.dark-footer {
+  padding: 10px 0;
+  background: #464e51;
+  color: white;
+  h4 {
+    font-size: 1em;
+    margin: 10px 0;
+    padding: 0;
+  }
+  ul {
+    font-size: 0.85em;
+  }
+  a {
+    color: #8f8f8f;
+  }
+}
+
+#google_map {
+  height: 500px;
+  width: 100%;
+}
