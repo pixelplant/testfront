@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-blue">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <form class="d-inline w-100 my-2 search-form" action="" method="post">
+                <div class="form-row">
+                    <div class="col-12 col-md-5">
+                        <div class="input-group input-group-sm my-2 my-md-0">
+                            <div class="input-group-addon"><span class="fa fa-fw fa-search"></span></div>
+                            <input class="form-control" type="text" placeholder="Search for a location" aria-label="Search">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid spacing-normal">
+    <div class="container">
+        <div class="row">
+            <div class="col d-none d-md-block">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="btn btn-secondary btn-sm" href="#"><span class="fa fa-angle-double-left"></span></a></li>
+                    <li class="breadcrumb-item starter"><a href="#">Geneva</a></li>
+                    <li class="breadcrumb-item"><a href="#">Champel</a></li>
+                    <li class="breadcrumb-item"><a href="#">Av. Bertrand</a></li>
+                    <li class="breadcrumb-item active">Av. Bertrand 1</li>
+                </ol>
+            </div>
+            <div class="col text-right">
+                <span class="estate-paginator"><strong id="page_current">{{currentIndex + 1}}</strong> of <strong id="page_total">{{estates?.length}}</strong></span>
+                <div class="btn-group" role="group" aria-label="Estate browser">
+                    <button type="button" class="btn btn-secondary btn-sm" aria-label="Previous estate" (click)="showEstate(-1)"><span class="fa fa-angle-left"></span></button>
+                    <button type="button" class="btn btn-secondary btn-sm" aria-label="Next estate" (click)="showEstate(1)"><span class="fa fa-angle-right"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+</div>
+
+<p class="text-center lead" *ngIf="loading">Loading...</p>
+
+<estate-detail [estate]="currentEstate"></estate-detail>
+
