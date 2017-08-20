@@ -4,9 +4,10 @@ The project is divided in 2 folders: **static** and **angular**.
 * **angular** holds the angular 4 implementation of the markup
 
 The **markup** can be previewed here: http://www.continut.org/test
+
 The **angular** implementation, here: http://www.continut.org/test/angular/dist/
 
-##_static_ folder
+## _static_ folder
 
 * Holds the markup, scss and js code of the template.
 * Uses bootstrap v4beta as a css framework and fontawesome for the icons.
@@ -24,7 +25,7 @@ If the Google Map does not display, make sure to use a valid Google Maps Api key
 
 The final compiled css gets generated inside _css/app-ui.css_
 
-##_angular_ folder
+## _angular_ folder
 
 * Holds the angular implementation of the static files
 * Uses the latest version of angular (v4.3.5)
